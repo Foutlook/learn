@@ -1,0 +1,351 @@
+2019-02-28 10:35:03,938 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xf65c7540] REGISTERED
+2019-02-28 10:35:04,000 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xf65c7540] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 10:35:04,001 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xf65c7540, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 10:35:13,559 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xf65c7540, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x3ced62f2, /127.0.0.1:52563 => /127.0.0.1:8080]
+2019-02-28 10:39:09,252 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xf65c7540, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x1a7726d5, /127.0.0.1:52644 => /127.0.0.1:8080]
+2019-02-28 10:39:09,255 [nioEventLoopGroup-1-1] [io.netty.channel.ChannelInitializer] [WARN] - Failed to initialize a channel. Closing: [id: 0x1a7726d5, /127.0.0.1:52644 => /127.0.0.1:8080]
+io.netty.channel.ChannelPipelineException: com.foutin.io.netty.reconnection.AcceptorIdleStateTrigger is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:565)
+	at io.netty.channel.DefaultChannelPipeline.addLast0(DefaultChannelPipeline.java:152)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:146)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:329)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:300)
+	at com.foutin.io.netty.reconnection.HeartBeatServer$1.initChannel(HeartBeatServer.java:45)
+	at com.foutin.io.netty.reconnection.HeartBeatServer$1.initChannel(HeartBeatServer.java:41)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelRegisteredNow(ChannelHandlerInvokerUtil.java:32)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelRegistered(DefaultChannelHandlerInvoker.java:50)
+	at io.netty.channel.PausableChannelEventExecutor.invokeChannelRegistered(PausableChannelEventExecutor.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:843)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:519)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:422)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:492)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 10:39:09,414 [nioEventLoopGroup-0-2] [io.netty.channel.ChannelInitializer] [WARN] - Failed to initialize a channel. Closing: [id: 0xf9010ff0]
+io.netty.channel.ChannelPipelineException: com.foutin.io.netty.reconnection.HeartBeatsClient$1 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:565)
+	at io.netty.channel.DefaultChannelPipeline.addLast0(DefaultChannelPipeline.java:152)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:146)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:329)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:300)
+	at com.foutin.io.netty.reconnection.ConnectionWatchdog$1.initChannel(ConnectionWatchdog.java:70)
+	at com.foutin.io.netty.reconnection.ConnectionWatchdog$1.initChannel(ConnectionWatchdog.java:67)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelRegisteredNow(ChannelHandlerInvokerUtil.java:32)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelRegistered(DefaultChannelHandlerInvoker.java:50)
+	at io.netty.channel.PausableChannelEventExecutor.invokeChannelRegistered(PausableChannelEventExecutor.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:843)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:519)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:422)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:492)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 10:40:22,680 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xaf291678] REGISTERED
+2019-02-28 10:40:22,682 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xaf291678] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 10:40:22,684 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xaf291678, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 10:40:27,673 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xaf291678, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x41dc3425, /127.0.0.1:52769 => /127.0.0.1:8080]
+2019-02-28 10:48:50,769 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xaf291678, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x974d4f65, /127.0.0.1:52979 => /127.0.0.1:8080]
+2019-02-28 10:48:50,771 [nioEventLoopGroup-1-0] [io.netty.channel.ChannelInitializer] [WARN] - Failed to initialize a channel. Closing: [id: 0x974d4f65, /127.0.0.1:52979 => /127.0.0.1:8080]
+io.netty.channel.ChannelPipelineException: com.foutin.io.netty.reconnection.AcceptorIdleStateTrigger is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:565)
+	at io.netty.channel.DefaultChannelPipeline.addLast0(DefaultChannelPipeline.java:152)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:146)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:329)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:300)
+	at com.foutin.io.netty.reconnection.HeartBeatServer$1.initChannel(HeartBeatServer.java:45)
+	at com.foutin.io.netty.reconnection.HeartBeatServer$1.initChannel(HeartBeatServer.java:41)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelRegisteredNow(ChannelHandlerInvokerUtil.java:32)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelRegistered(DefaultChannelHandlerInvoker.java:50)
+	at io.netty.channel.PausableChannelEventExecutor.invokeChannelRegistered(PausableChannelEventExecutor.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:843)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:519)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:422)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:492)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 10:49:06,783 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xaf291678, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xc46c3d61, /127.0.0.1:53001 => /127.0.0.1:8080]
+2019-02-28 10:49:06,785 [nioEventLoopGroup-1-1] [io.netty.channel.ChannelInitializer] [WARN] - Failed to initialize a channel. Closing: [id: 0xc46c3d61, /127.0.0.1:53001 => /127.0.0.1:8080]
+io.netty.channel.ChannelPipelineException: com.foutin.io.netty.reconnection.AcceptorIdleStateTrigger is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:565)
+	at io.netty.channel.DefaultChannelPipeline.addLast0(DefaultChannelPipeline.java:152)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:146)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:329)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:300)
+	at com.foutin.io.netty.reconnection.HeartBeatServer$1.initChannel(HeartBeatServer.java:45)
+	at com.foutin.io.netty.reconnection.HeartBeatServer$1.initChannel(HeartBeatServer.java:41)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelRegisteredNow(ChannelHandlerInvokerUtil.java:32)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelRegistered(DefaultChannelHandlerInvoker.java:50)
+	at io.netty.channel.PausableChannelEventExecutor.invokeChannelRegistered(PausableChannelEventExecutor.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:843)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:519)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:422)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:492)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 10:49:06,918 [nioEventLoopGroup-0-3] [io.netty.channel.ChannelInitializer] [WARN] - Failed to initialize a channel. Closing: [id: 0xe830dc3f]
+io.netty.channel.ChannelPipelineException: com.foutin.io.netty.reconnection.HeartBeatsClient$1 is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:565)
+	at io.netty.channel.DefaultChannelPipeline.addLast0(DefaultChannelPipeline.java:152)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:146)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:329)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:300)
+	at com.foutin.io.netty.reconnection.ConnectionWatchdog$1.initChannel(ConnectionWatchdog.java:70)
+	at com.foutin.io.netty.reconnection.ConnectionWatchdog$1.initChannel(ConnectionWatchdog.java:67)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelRegisteredNow(ChannelHandlerInvokerUtil.java:32)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelRegistered(DefaultChannelHandlerInvoker.java:50)
+	at io.netty.channel.PausableChannelEventExecutor.invokeChannelRegistered(PausableChannelEventExecutor.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:843)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:519)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:422)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:492)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 10:51:11,300 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x813f7240] REGISTERED
+2019-02-28 10:51:11,303 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x813f7240] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 10:51:11,305 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x813f7240, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 10:51:15,703 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x813f7240, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x07044842, /127.0.0.1:53075 => /127.0.0.1:8080]
+2019-02-28 10:52:15,939 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28] REGISTERED
+2019-02-28 10:52:15,942 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 10:52:15,944 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 10:52:19,585 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xb76e5e51, /127.0.0.1:53138 => /127.0.0.1:8080]
+2019-02-28 10:52:26,111 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x5e0cbf3a, /127.0.0.1:53161 => /127.0.0.1:8080]
+2019-02-28 10:52:28,925 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xecd723ec, /127.0.0.1:53183 => /127.0.0.1:8080]
+2019-02-28 10:52:34,047 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x440e9b28, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x51101288, /127.0.0.1:53209 => /127.0.0.1:8080]
+2019-02-28 11:00:42,734 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x20156c99] REGISTERED
+2019-02-28 11:00:42,737 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x20156c99] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:00:42,739 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x20156c99, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:00:46,233 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x20156c99, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x33297a83, /127.0.0.1:53401 => /127.0.0.1:8080]
+2019-02-28 11:01:16,174 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x2fb5cf85] REGISTERED
+2019-02-28 11:01:16,177 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x2fb5cf85] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:01:16,179 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x2fb5cf85, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:01:19,405 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x2fb5cf85, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xb28a313b, /127.0.0.1:53457 => /127.0.0.1:8080]
+2019-02-28 11:02:05,672 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x4e852ad9] REGISTERED
+2019-02-28 11:02:05,675 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x4e852ad9] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:02:05,677 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x4e852ad9, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:02:08,524 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x4e852ad9, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4ec87281, /127.0.0.1:53523 => /127.0.0.1:8080]
+2019-02-28 11:06:28,109 [nioEventLoopGroup-0-0] [io.netty.channel.DefaultChannelPipeline] [WARN] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:311)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:471)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:385)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 11:20:02,934 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe3fc244b] REGISTERED
+2019-02-28 11:20:02,936 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe3fc244b] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:20:02,938 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe3fc244b, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:20:09,657 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe3fc244b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x31f00fb4, /127.0.0.1:54054 => /127.0.0.1:8080]
+2019-02-28 11:23:57,392 [nioEventLoopGroup-0-0] [io.netty.channel.DefaultChannelPipeline] [WARN] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:311)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:471)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:385)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 11:30:55,608 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963] REGISTERED
+2019-02-28 11:30:55,611 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:30:55,613 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:30:59,250 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x7a407a92, /127.0.0.1:54270 => /127.0.0.1:8080]
+2019-02-28 11:31:04,415 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x53228986, /127.0.0.1:54272 => /127.0.0.1:8080]
+2019-02-28 11:31:09,504 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4003b944, /127.0.0.1:54274 => /127.0.0.1:8080]
+2019-02-28 11:31:14,607 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xc04ad4b3, /127.0.0.1:54276 => /127.0.0.1:8080]
+2019-02-28 11:31:19,707 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x84b64580, /127.0.0.1:54279 => /127.0.0.1:8080]
+2019-02-28 11:31:24,808 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4f890cd4, /127.0.0.1:54281 => /127.0.0.1:8080]
+2019-02-28 11:31:29,909 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x56ae0963, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xd08b5308, /127.0.0.1:54287 => /127.0.0.1:8080]
+2019-02-28 11:32:40,093 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe917af7d] REGISTERED
+2019-02-28 11:32:40,096 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe917af7d] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:32:40,097 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe917af7d, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:32:43,739 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe917af7d, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xf2f64b52, /127.0.0.1:54354 => /127.0.0.1:8080]
+2019-02-28 11:32:53,878 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe917af7d, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x90d8d0d6, /127.0.0.1:54356 => /127.0.0.1:8080]
+2019-02-28 11:33:03,969 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0xe917af7d, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xab2e3b14, /127.0.0.1:54359 => /127.0.0.1:8080]
+2019-02-28 11:33:08,253 [nioEventLoopGroup-0-1] [io.netty.channel.DefaultChannelPipeline] [WARN] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:311)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:471)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:385)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 11:33:59,205 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x03da592b] REGISTERED
+2019-02-28 11:33:59,208 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x03da592b] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 11:33:59,210 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x03da592b, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 11:34:03,753 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x03da592b, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xcb29dac6, /127.0.0.1:54423 => /127.0.0.1:8080]
+2019-02-28 13:18:02,466 [nioEventLoopGroup-0-7] [io.netty.channel.DefaultChannelPipeline] [WARN] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:311)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:471)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:385)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 14:04:54,529 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8e0097f8] REGISTERED
+2019-02-28 14:04:54,532 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8e0097f8] BIND: 0.0.0.0/0.0.0.0:8989
+2019-02-28 14:04:54,534 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8e0097f8, /0:0:0:0:0:0:0:0:8989] ACTIVE
+2019-02-28 14:05:07,019 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8e0097f8, /0:0:0:0:0:0:0:0:8989] RECEIVED: [id: 0x226bbceb, /127.0.0.1:56418 => /127.0.0.1:8989]
+2019-02-28 14:22:16,408 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x6ef4b0c4] REGISTERED
+2019-02-28 14:22:16,411 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x6ef4b0c4] BIND: 0.0.0.0/0.0.0.0:8765
+2019-02-28 14:22:16,413 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x6ef4b0c4, /0:0:0:0:0:0:0:0:8765] ACTIVE
+2019-02-28 14:22:22,420 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x6ef4b0c4, /0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb957552c, /127.0.0.1:56750 => /127.0.0.1:8765]
+2019-02-28 14:26:16,737 [nioEventLoopGroup-1-0] [io.netty.channel.DefaultChannelPipeline] [WARN] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:311)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:641)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:471)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:385)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 14:26:43,976 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x28bf252b] REGISTERED
+2019-02-28 14:26:43,979 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x28bf252b] BIND: 0.0.0.0/0.0.0.0:8765
+2019-02-28 14:26:43,981 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x28bf252b, /0:0:0:0:0:0:0:0:8765] ACTIVE
+2019-02-28 14:26:49,969 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x28bf252b, /0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb54899b0, /127.0.0.1:56921 => /127.0.0.1:8765]
+2019-02-28 14:39:17,481 [nioEventLoopGroup-0-0] [io.netty.channel.DefaultChannelPipeline] [WARN] - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:311)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:853)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:240)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:115)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:514)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:471)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:385)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:351)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2019-02-28 15:03:20,695 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953] REGISTERED
+2019-02-28 15:03:20,698 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 15:03:20,700 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 15:03:30,544 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x2368c704, /127.0.0.1:57463 => /127.0.0.1:8080]
+2019-02-28 15:03:30,546 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x985aab00, /127.0.0.1:57464 => /127.0.0.1:8080]
+2019-02-28 15:03:30,546 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xbdf6a1dc, /127.0.0.1:57465 => /127.0.0.1:8080]
+2019-02-28 15:03:30,547 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x45db4953, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x5ab309b2, /127.0.0.1:57466 => /127.0.0.1:8080]
+2019-02-28 15:26:02,969 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8da3bb69] REGISTERED
+2019-02-28 15:26:02,972 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8da3bb69] BIND: 0.0.0.0/0.0.0.0:8080
+2019-02-28 15:26:02,975 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8da3bb69, /0:0:0:0:0:0:0:0:8080] ACTIVE
+2019-02-28 15:26:12,664 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8da3bb69, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x078966fe, /127.0.0.1:58116 => /127.0.0.1:8080]
+2019-02-28 15:26:12,666 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8da3bb69, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x90086cf9, /127.0.0.1:58117 => /127.0.0.1:8080]
+2019-02-28 15:26:12,666 [nioEventLoopGroup-0-0] [io.netty.handler.logging.LoggingHandler] [INFO] - [id: 0x8da3bb69, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xb5e5df69, /127.0.0.1:58118 => /127.0.0.1:8080]

@@ -1,0 +1,19 @@
+syntax ="proto2";
+
+package com.foutin.netty;
+
+option optimize_for = SPEED;
+option java_package = "com.foutin.io.netty.google.protobuf";
+option java_outer_classname="DataInfo";
+
+message RequestUser{
+    optional string user_name = 1;
+    optional int32 age = 2;
+    optional string password = 3;
+}
+
+message ResponseBank{
+    optional string bank_no = 1;
+    optional double money = 2;
+    optional string bank_name=3;
+}
