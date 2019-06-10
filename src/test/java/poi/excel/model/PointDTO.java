@@ -8,6 +8,7 @@ import com.foutin.poi.excel.annotation.ExcelSheet;
  * @author xingkai.fan
  * @description
  * @date 2019/6/10 14:00
+ * 注意：ExcelSheet注解的name指的是 Excel左下角的表名，比如默认是Sheet1,2,3,....
  */
 @ExcelSheet(name = "points2")
 public class PointDTO {
