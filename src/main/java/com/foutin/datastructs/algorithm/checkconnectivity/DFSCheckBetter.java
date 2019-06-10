@@ -14,16 +14,17 @@ public class DFSCheckBetter {
 
     private class TreeNode {
         int index;
-        char data;
+        Object data;
         List<TreeNode> nextNote;
     }
 
     /**
      * 生成树
-     * @param points  顶点数组
+     *
+     * @param points 顶点数组
      * @param edges  两顶点二维数组
      */
-    private void generateTree(char[] points, char[][] edges) {
+    public void generateTree(Object[] points, Object[][] edges) {
 
         // 初始化顶点数
         int vlen = points.length;
@@ -38,34 +39,34 @@ public class DFSCheckBetter {
         }
 
         // 初始化"边"
-        for (char[] edge : edges) {
-        // 读取边的起始顶点和结束顶点
-        char c1 = edge[0];
-        char c2 = edge[1];
-        // 读取边的起始顶点和结束顶点
-        int p1 = getPosition(c1);
-        int p2 = getPosition(c2);
+        for (Object[] edge : edges) {
+            // 读取边的起始顶点和结束顶点
+            Object c1 = edge[0];
+            Object c2 = edge[1];
+            // 读取边的起始顶点和结束顶点
+            int p1 = getPosition(c1);
+            int p2 = getPosition(c2);
 
-        // 初始化node1
-        TreeNode node1 = new TreeNode();
-        node1.index = p2;
-        // 将node1存到List中
-        treeNodes[p1].nextNote.add(node1);
+            // 初始化node1
+            TreeNode node1 = new TreeNode();
+            node1.index = p2;
+            // 将node1存到List中
+            treeNodes[p1].nextNote.add(node1);
 
-        // 初始化node2
-        TreeNode node2 = new TreeNode();
-        node2.index = p1;
-        // 将node2存到List中
-        treeNodes[p2].nextNote.add(node2);
+            // 初始化node2
+            TreeNode node2 = new TreeNode();
+            node2.index = p1;
+            // 将node2存到List中
+            treeNodes[p2].nextNote.add(node2);
+        }
     }
-}
 
     /**
      * 返回顶点位置
      */
-    private int getPosition(char lg) {
+    private int getPosition(Object lg) {
         for (int i = 0; i < treeNodes.length; i++) {
-            if (treeNodes[i].data == lg) {
+            if (treeNodes[i].data.equals(lg)) {
                 return i;
             }
         }
@@ -92,7 +93,7 @@ public class DFSCheckBetter {
     /**
      * 深度优先搜索遍历图
      */
-    private void dfs() {
+    public void dfs() {
         // 顶点访问标记
         boolean[] visited = new boolean[treeNodes.length];
 
@@ -115,7 +116,7 @@ public class DFSCheckBetter {
     }
 
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         DFSCheckBetter dfsCheckBetter = new DFSCheckBetter();
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f', 'G', 'H', 'I'};
         char[][] edges = new char[][]{
@@ -124,8 +125,7 @@ public class DFSCheckBetter {
                 {'d', 'c'}, {'e', 'a'}, {'e', 'f'}, {'f', 'e'}, {'f', 'c'},};
         dfsCheckBetter.generateTree(vexs, edges);
         dfsCheckBetter.dfs();
-    }
-
+    }*/
 
 
 }
