@@ -4,9 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author xingkai.fan
  * @description
+ * @author xingkai.fan
  * @date 2019/6/5 20:02
+ *      ┌─┐       ┌─┐
+ *   ┌──┘ ┴───────┘ ┴──┐
+ *   │                 │
+ *   │       ───       │
+ *   │  ─┬┘       └┬─  │
+ *   │                 │
+ *   │       ─┴─       │
+ *   │                 │
+ *   └───┐         ┌───┘
+ *       │         │
+ *       │         │
+ *       │         │
+ *       │         └──────────────┐
+ *       │                        │
+ *       │                        ├─┐
+ *       │                        ┌─┘
+ *       │                        │
+ *       └─┐  ┐  ┌───────┬──┐  ┌──┘
+ *         │ ─┤ ─┤       │ ─┤ ─┤
+ *         └──┴──┘       └──┴──┘
+ *                神兽保佑
+ *               代码无BUG!
  */
 public class DFSCheckBetter {
 
