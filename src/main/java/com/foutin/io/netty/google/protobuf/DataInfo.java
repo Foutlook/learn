@@ -142,7 +142,7 @@ public final class DataInfo {
         internalGetFieldAccessorTable() {
       return DataInfo.internal_static_com_foutin_netty_RequestUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              DataInfo.RequestUser.class, DataInfo.RequestUser.Builder.class);
+              RequestUser.class, Builder.class);
     }
 
     private int bitField0_;
@@ -294,10 +294,10 @@ public final class DataInfo {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof DataInfo.RequestUser)) {
+      if (!(obj instanceof RequestUser)) {
         return super.equals(obj);
       }
-      DataInfo.RequestUser other = (DataInfo.RequestUser) obj;
+      RequestUser other = (RequestUser) obj;
 
       boolean result = true;
       result = result && (hasUserName() == other.hasUserName());
@@ -343,69 +343,69 @@ public final class DataInfo {
       return hash;
     }
 
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DataInfo.RequestUser parseFrom(byte[] data)
+    public static RequestUser parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DataInfo.RequestUser parseFrom(java.io.InputStream input)
+    public static RequestUser parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DataInfo.RequestUser parseDelimitedFrom(java.io.InputStream input)
+    public static RequestUser parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static DataInfo.RequestUser parseDelimitedFrom(
+    public static RequestUser parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DataInfo.RequestUser parseFrom(
+    public static RequestUser parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -417,7 +417,7 @@ public final class DataInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(DataInfo.RequestUser prototype) {
+    public static Builder newBuilder(RequestUser prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -437,7 +437,7 @@ public final class DataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.foutin.netty.RequestUser)
-        DataInfo.RequestUserOrBuilder {
+        RequestUserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return DataInfo.internal_static_com_foutin_netty_RequestUser_descriptor;
@@ -447,7 +447,7 @@ public final class DataInfo {
           internalGetFieldAccessorTable() {
         return DataInfo.internal_static_com_foutin_netty_RequestUser_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                DataInfo.RequestUser.class, DataInfo.RequestUser.Builder.class);
+                RequestUser.class, Builder.class);
       }
 
       // Construct using com.foutin.io.netty.google.protobuf.DataInfo.RequestUser.newBuilder()
@@ -481,20 +481,20 @@ public final class DataInfo {
         return DataInfo.internal_static_com_foutin_netty_RequestUser_descriptor;
       }
 
-      public DataInfo.RequestUser getDefaultInstanceForType() {
-        return DataInfo.RequestUser.getDefaultInstance();
+      public RequestUser getDefaultInstanceForType() {
+        return RequestUser.getDefaultInstance();
       }
 
-      public DataInfo.RequestUser build() {
-        DataInfo.RequestUser result = buildPartial();
+      public RequestUser build() {
+        RequestUser result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public DataInfo.RequestUser buildPartial() {
-        DataInfo.RequestUser result = new DataInfo.RequestUser(this);
+      public RequestUser buildPartial() {
+        RequestUser result = new RequestUser(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -541,16 +541,16 @@ public final class DataInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof DataInfo.RequestUser) {
-          return mergeFrom((DataInfo.RequestUser)other);
+        if (other instanceof RequestUser) {
+          return mergeFrom((RequestUser)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(DataInfo.RequestUser other) {
-        if (other == DataInfo.RequestUser.getDefaultInstance()) return this;
+      public Builder mergeFrom(RequestUser other) {
+        if (other == RequestUser.getDefaultInstance()) return this;
         if (other.hasUserName()) {
           bitField0_ |= 0x00000001;
           userName_ = other.userName_;
@@ -577,11 +577,11 @@ public final class DataInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        DataInfo.RequestUser parsedMessage = null;
+        RequestUser parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (DataInfo.RequestUser) e.getUnfinishedMessage();
+          parsedMessage = (RequestUser) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -790,12 +790,12 @@ public final class DataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.foutin.netty.RequestUser)
-    private static final DataInfo.RequestUser DEFAULT_INSTANCE;
+    private static final RequestUser DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new DataInfo.RequestUser();
+      DEFAULT_INSTANCE = new RequestUser();
     }
 
-    public static DataInfo.RequestUser getDefaultInstance() {
+    public static RequestUser getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -818,7 +818,7 @@ public final class DataInfo {
       return PARSER;
     }
 
-    public DataInfo.RequestUser getDefaultInstanceForType() {
+    public RequestUser getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -952,7 +952,7 @@ public final class DataInfo {
         internalGetFieldAccessorTable() {
       return DataInfo.internal_static_com_foutin_netty_ResponseBank_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              DataInfo.ResponseBank.class, DataInfo.ResponseBank.Builder.class);
+              ResponseBank.class, Builder.class);
     }
 
     private int bitField0_;
@@ -1104,10 +1104,10 @@ public final class DataInfo {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof DataInfo.ResponseBank)) {
+      if (!(obj instanceof ResponseBank)) {
         return super.equals(obj);
       }
-      DataInfo.ResponseBank other = (DataInfo.ResponseBank) obj;
+      ResponseBank other = (ResponseBank) obj;
 
       boolean result = true;
       result = result && (hasBankNo() == other.hasBankNo());
@@ -1156,69 +1156,69 @@ public final class DataInfo {
       return hash;
     }
 
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DataInfo.ResponseBank parseFrom(byte[] data)
+    public static ResponseBank parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DataInfo.ResponseBank parseFrom(java.io.InputStream input)
+    public static ResponseBank parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DataInfo.ResponseBank parseDelimitedFrom(java.io.InputStream input)
+    public static ResponseBank parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static DataInfo.ResponseBank parseDelimitedFrom(
+    public static ResponseBank parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DataInfo.ResponseBank parseFrom(
+    public static ResponseBank parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1230,7 +1230,7 @@ public final class DataInfo {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(DataInfo.ResponseBank prototype) {
+    public static Builder newBuilder(ResponseBank prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1250,7 +1250,7 @@ public final class DataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.foutin.netty.ResponseBank)
-        DataInfo.ResponseBankOrBuilder {
+        ResponseBankOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return DataInfo.internal_static_com_foutin_netty_ResponseBank_descriptor;
@@ -1260,7 +1260,7 @@ public final class DataInfo {
           internalGetFieldAccessorTable() {
         return DataInfo.internal_static_com_foutin_netty_ResponseBank_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                DataInfo.ResponseBank.class, DataInfo.ResponseBank.Builder.class);
+                ResponseBank.class, Builder.class);
       }
 
       // Construct using com.foutin.io.netty.google.protobuf.DataInfo.ResponseBank.newBuilder()
@@ -1294,20 +1294,20 @@ public final class DataInfo {
         return DataInfo.internal_static_com_foutin_netty_ResponseBank_descriptor;
       }
 
-      public DataInfo.ResponseBank getDefaultInstanceForType() {
-        return DataInfo.ResponseBank.getDefaultInstance();
+      public ResponseBank getDefaultInstanceForType() {
+        return ResponseBank.getDefaultInstance();
       }
 
-      public DataInfo.ResponseBank build() {
-        DataInfo.ResponseBank result = buildPartial();
+      public ResponseBank build() {
+        ResponseBank result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public DataInfo.ResponseBank buildPartial() {
-        DataInfo.ResponseBank result = new DataInfo.ResponseBank(this);
+      public ResponseBank buildPartial() {
+        ResponseBank result = new ResponseBank(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1354,16 +1354,16 @@ public final class DataInfo {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof DataInfo.ResponseBank) {
-          return mergeFrom((DataInfo.ResponseBank)other);
+        if (other instanceof ResponseBank) {
+          return mergeFrom((ResponseBank)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(DataInfo.ResponseBank other) {
-        if (other == DataInfo.ResponseBank.getDefaultInstance()) return this;
+      public Builder mergeFrom(ResponseBank other) {
+        if (other == ResponseBank.getDefaultInstance()) return this;
         if (other.hasBankNo()) {
           bitField0_ |= 0x00000001;
           bankNo_ = other.bankNo_;
@@ -1390,11 +1390,11 @@ public final class DataInfo {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        DataInfo.ResponseBank parsedMessage = null;
+        ResponseBank parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (DataInfo.ResponseBank) e.getUnfinishedMessage();
+          parsedMessage = (ResponseBank) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1603,12 +1603,12 @@ public final class DataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.foutin.netty.ResponseBank)
-    private static final DataInfo.ResponseBank DEFAULT_INSTANCE;
+    private static final ResponseBank DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new DataInfo.ResponseBank();
+      DEFAULT_INSTANCE = new ResponseBank();
     }
 
-    public static DataInfo.ResponseBank getDefaultInstance() {
+    public static ResponseBank getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1631,7 +1631,7 @@ public final class DataInfo {
       return PARSER;
     }
 
-    public DataInfo.ResponseBank getDefaultInstanceForType() {
+    public ResponseBank getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
