@@ -19,7 +19,7 @@
 
         <grpc.version>1.17.1</grpc.version>
         <protobuf.version>3.5.0</protobuf.version>
-        <poi.version>3.17</poi.version>
+        <poi.version>4.1.1</poi.version>
     </properties>
 
 
